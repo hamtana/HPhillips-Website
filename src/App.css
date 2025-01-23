@@ -5,7 +5,7 @@
   --vibrant-blue: #00aaff;
   --white: #ffffff;
   --font-family: 'Inter', sans-serif;
-  --max-width: 1280px;
+  --max-width: 100%;
 }
 
 /* Root container */
