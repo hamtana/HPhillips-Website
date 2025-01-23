@@ -10,7 +10,7 @@
 
 /* Root container */
 #root {
-  max-width: var(--max-width);
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
