@@ -5,7 +5,7 @@ function Home() {
     <>
       {/* Header */}
       <header>
-        <h2>Phillips Music & Tech</h2>
+        <h1>Phillips Music & Tech</h1>
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -18,7 +18,6 @@ function Home() {
       {/* Main Content */}
       <main>
         <img src="/path-to-your-logo.jpg" className="logo" alt="Phillips Music & Tech Logo" />
-        <h1>Phillips Music & Tech</h1>
         <p>Welcome to Phillips Music & Tech! We are a small business that specializes in music and technology. We offer a variety of services including music lessons, instrument repair, and computer repair. Our goal is to provide high-quality services at affordable prices. If you have any questions or would like to schedule an appointment, please contact us.</p>
       </main>
 
