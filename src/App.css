@@ -72,11 +72,7 @@ nav ul li a:hover {
 
 /* Main content */
 main {
-  flex: 1; /* Allows content to stretch */
-  width: 100%; /* Ensures it spans the full width */
-  display: flex;
-  justify-content: center; /* Centers content inside */
-  align-items: center; /* Centers content inside */
+  padding: 2rem 1rem;
 }
 
 main h1 {
