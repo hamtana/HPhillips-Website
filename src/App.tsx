@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { Home } from "./Home";
-import { Services } from "./services";
-import { Contact } from "./Contact";
-import { FAQ } from "./faq";
+import { Home } from "./home.tsx";
+import { Services } from "./services.tsx";
+import { Contact } from "./contact.tsx";
+import { FAQ } from "./faq.tsx";
 import "./App.css";
 
 function App() {

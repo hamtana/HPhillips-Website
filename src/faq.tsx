@@ -1,5 +1,7 @@
 import './App.css';
-function faq() {
+import logo from '/logo.jpeg'
+
+function FAQ() {
   return (
     <>
       {/* Header */}
@@ -31,4 +33,4 @@ function faq() {
   );
 }
 
-export default faq;
+export default FAQ;

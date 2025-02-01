@@ -1,4 +1,6 @@
 import './App.css';
+import logo from '/logo.jpeg'
+
 function Services() {
   return (
     <>
