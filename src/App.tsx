@@ -24,7 +24,7 @@ function App() {
           </Routes>
         </main>
         <footer className="bg-gray-800 text-white text-center p-4">
-          &copy; 2025 Phillip's Music & Tech. All Rights Reserved.
+          &copy; 2025 Phillips Music & Tech. All Rights Reserved.
         </footer>
       </div>
     </Router>
