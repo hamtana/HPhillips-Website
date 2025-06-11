@@ -7,6 +7,7 @@ export const Home = () => {
     <ThemeToggle/>
 
     {/* Background Effects */}
+    
 
     {/* Navbar */}
 
