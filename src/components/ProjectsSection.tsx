@@ -7,21 +7,21 @@ const projects = [
     {
         id: 1,
         title: "PantryPal",
-        description: "A website developed with a team from University which uses AI to produce receipes, based off items that you have added to your Pantry",
+        description: "A website developed with a team from University which uses AI to produce recipes, based off items that you have added to your Pantry",
         image: "tbc",
         tags: ["React", "Django Python"],
         demoUrl: "#",
-        githubUrl: "#"
+        githubUrl: "https://github.com/hamtana/PantryPal/tree/master"
     },
 
     {
         id: 2,
         title: "Phillips Music & Tech Website",
         description: "A website developed to show my portfolio of work, and let people get in contact with me regarding self-employed work",
-        image: "tbc",
+        image: "../",
         tags: ["Vite+React", "Vercel", "TailwindCSS"],
-        demoUrl: "#",
-        githubUrl: "#"
+        demoUrl: "https://phillipsmusictech.co.nz",
+        githubUrl: "https://github.com/hamtana/HPhillips-Website"
     },
 
     {

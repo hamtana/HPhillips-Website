@@ -1,21 +1,28 @@
-# React + TypeScript + Vite
+# Phillips Music & Tech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-While this project uses React, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
+This website is built using **React + Vite** and styled with **Tailwind CSS**. Development was done using **VS Code** and **IntelliJ**, and the site is deployed via **Vercel**.
 
-## Deploy Your Own
+## 🌐 Website URL
 
-Deploy your own Vite project with Vercel.
+> [phillipsmusictech.co.nz](https://phillipsmusictech.co.nz)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/vite-react&template=vite-react)
+## 🛠️ Running the Website Locally
 
-_Live Example: https://vite-react-example.vercel.app_
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/hamtana/HPhillips-Website.git
+   ```
 
-### Deploying From Your Terminal
+2. **Install Dependencies -  ensure you have nvm and npm installed
+   ```bash
+   npm install
+   ```
 
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
+3. **Build and preview the site**
+   ```bash
+   npm run build
+   npm run preview
+   ```
 
-```shell
-$ vercel
-```
