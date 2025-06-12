@@ -32,7 +32,7 @@ const projects = [
         image: "/projects/InDevelopment.png",
         tags: ["React", "Java Springboot", "PostgreSQL"],
         demoUrl: "#",
-        githubUrl: "#"
+        githubUrl: "https://github.com/hamtana/Uniform-Tracker"
     }
 
 
