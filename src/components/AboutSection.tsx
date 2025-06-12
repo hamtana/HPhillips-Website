@@ -23,7 +23,7 @@ export const AboutSection = () => {
             </p>
 
             <p className="text-muted-foreground">
-              <h3 className="text-1xl font-semibold">Key Attributes</h3>
+              <h3 className="text-2xl font-semibold">Key Attributes</h3>
             </p>
 
               <ul className="list-disc pl-6 text-muted-foreground">
