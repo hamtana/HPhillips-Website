@@ -1,4 +1,4 @@
-import { Linkedin, Mail, MapPin, Phone} from "lucide-react";
+import { Linkedin, Mail, MapPin} from "lucide-react";
 
 
 export const ContactSection = () => {
