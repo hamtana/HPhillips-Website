@@ -29,7 +29,7 @@ const projects = [
         id: 3,
         title: "CCDHB Uniform Tracker",
         description: "In development, building an inventory, uniform issuing and management system for Wellington Regional Hospital.",
-        image: "tbc",
+        image: "/projects/InDevelopment.png",
         tags: ["React", "Java Springboot", "PostgreSQL"],
         demoUrl: "#",
         githubUrl: "#"
