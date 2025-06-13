@@ -54,7 +54,7 @@ const musicProjects = [
         title: "What Goes Around",
         description: "Song recorded in 2024 as part of a university project.",
         tags: ["Logic Pro", "Pro Tools"],
-        audioSrc: "/audio/WhatGoesAround.wav",
+        audioSrc: "/audio/WhatGoesAround.mp3",
         
     },
 
