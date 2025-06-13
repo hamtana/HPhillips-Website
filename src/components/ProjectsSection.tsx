@@ -51,10 +51,10 @@ const musicProjects = [
 
     {
         id: 2,
-        title: "Undertow",
+        title: "What Goes Around",
         description: "Song recorded in 2024 as part of a university project.",
         tags: ["Logic Pro", "Pro Tools"],
-        audioSrc: "/audio/Undertow.mp3",
+        audioSrc: "/audio/WhatGoesAround.wav",
         
     },
 
