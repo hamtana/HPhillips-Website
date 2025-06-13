@@ -54,7 +54,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div className="flex flex-col items-center space-y-8 text-center">
+        <div className="flex flex-col p-2 items-center space-y-8 text-center">
             <h3 className="text-2xl font-semibold mb-6">
             Contact Information
             </h3>
@@ -105,7 +105,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
 
                 
-            <div className="bg-card rounded-lg shadow-xs" >
+            <div className="bg-card p-2 rounded-lg shadow-xs" >
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
             <form className="space-y-6" onSubmit={handleSubmit}>
