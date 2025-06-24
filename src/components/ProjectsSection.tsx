@@ -70,6 +70,18 @@ const musicProjects = [
 
 ]
 
+// Software Management Projects Section
+const softwareManagementProjects = [
+    {
+        id: 1,
+        title: "Nichol's Website",
+        description: "A website I manage for a New Zealand business based in the lower South Island, I have been maintaining this website for the past three years.",
+        image: "/projects/nichols.png",
+        tags: ["DNM Framework", "HTML", "CSS"],
+        demoUrl: "https://nichols.co.nz",
+    }
+]
+
 
 export const ProjectsSection = () => {
     return <section id="projects" className="py-24 px-4 relative">
@@ -126,9 +138,56 @@ export const ProjectsSection = () => {
             </div>
 
         </div>
+
+        {/* Software Management Projects Section */}
+        <div className="container mx-auto max-w-5xl py-12">
+            <h2 className="text-3xl md:text-4xl font-bold"> Featured <span className="text-primary"> Software Management Projects </span> </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto"> Here are some of current software management projects</p>
+
+            {/* Projects to be displayed below */}
+
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
+                {softwareManagementProjects.map((project, key) => (
+                    <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
+
+                        {/* Adding Project Image */}
+                        <div className="scale-100 overflow-hidden">
+                            <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        </div>
+
+                        {/* Adding Project Tags */}
+                        <div className="p-6">
+                            <div className="flex flex-wrap gap-2 mb-4">
+                                {project.tags.map((tag)=> (
+                                    <span className="px-2 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground">{tag}</span>
+                                ))}
+                            </div>
+                        </div>
+                        
+                        {/* Project Title */}
+                        <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+
+                        {/* Project Description */}
+                        <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+
+                        {/* Project Links*/}
+                        <div className="flex justify-between items-center">
+                            <div className="flex space-x-3">
+                                <a href={project.demoUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                    <ExternalLink size={20}/>
+                                </a>
+                            </div>     
+                        </div>
+                    
+                    
+                    </div>
+                ))}
+            </div>
+
+        </div>
         
         {/* Music Production Project Section */}
-        <div className="container py-24 px-4 mx-auto max-w-5xl">
+        <div className="container py-8 px-4 mx-auto max-w-5xl">
             <h2 className="text-3xl md:text-4xl font-bold"> Featured <span className="text-primary"> Music Projects </span> </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto"> Here are some of my recent and current music projects</p>
             {/* Projects to be displayed below */}
