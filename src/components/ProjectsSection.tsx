@@ -18,7 +18,7 @@ const projects = [
     {
         id: 2,
         title: "Phillips Music & Tech Website",
-        description: "A website developed to show my portfolio of work, and let people get in contact with me regarding self-employed work.",
+        description: "A website developed to show my portfolio of work, and let people get in contact with me regarding my self-employed work.",
         image: "/projects/project2.png",
         tags: ["Vite+React", "Vercel", "TailwindCSS"],
         demoUrl: "https://phillipsmusictech.co.nz",
@@ -142,7 +142,7 @@ export const ProjectsSection = () => {
         {/* Software Management Projects Section */}
         <div className="container mx-auto max-w-5xl py-12">
             <h2 className="text-3xl md:text-4xl font-bold"> Featured <span className="text-primary"> Software Management Projects </span> </h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto"> Here are some of current software management projects</p>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto"> Here are some of my current software management projects</p>
 
             {/* Projects to be displayed below */}
 
@@ -232,4 +232,5 @@ export const ProjectsSection = () => {
          
 
     </section>
+
 }
