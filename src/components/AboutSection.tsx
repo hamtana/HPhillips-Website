@@ -28,7 +28,7 @@ export const AboutSection = () => {
 
               <ul className="list-disc pl-6 text-muted-foreground">
                 <li><b>Time Management</b> -  I thrive in a busy environment and have become highly skilled at managing my time, balancing university studies, three job, and my music commitments and interests.</li>
-                <li><b>Problem Solver </b> - My substantial capacity for creative critical, and computational thinking makes me a highly effective problem solver in the development of packages and maintenance of existing systems.</li>
+                <li><b>Problem Solver </b> - My capacity for creative, critical, and computational thinking makes me a highly effective problem solver in the development of packages and maintenance of existing systems.</li>
               </ul>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
