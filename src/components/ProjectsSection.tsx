@@ -30,7 +30,7 @@ const projects = [
     id: 2,
     title: "Monthly File Copier",
     description:
-      "A simple yet impactful automation tool created after noticing the manual workload within the Nursing Bureau at Wellington Hospital. Staff were manually copying and renaming daily spreadsheets — so I built an application to automate the process. Users can input the month and year and choose from four tailored copying options.",
+      "A simple yet impactful automation tool created after noticing the manual workload within the Nursing Bureau at Wellington Hospital. Staff were manually copying and renaming daily spreadsheets. So, I built an application to automate the process. Users can input the month and year and choose from four tailored copying options.",
     tags: ["Java"],
     image: "/projects/imageNotAvailable.png",
     demoUrl: "#",
@@ -52,7 +52,7 @@ const projects = [
     id: 4,
     title: "Email Verifier",
     description:
-      "As part of my contract work, I often send emails containing multiple links. To avoid broken or outdated URLs, I developed a Python script that parses a .eml file, extracts every link, and returns the HTTP response codes — saving time and ensuring reliability.",
+      "As part of my contract work, I often send emails containing multiple links. To avoid broken or outdated URLs, I developed a Python script that parses a .eml file, extracts every link, and returns the HTTP response codes, saving time and ensuring reliability.",
     image: "/projects/imageNotAvailable.png",
     tags: ["Python"],
     demoUrl: "#",
