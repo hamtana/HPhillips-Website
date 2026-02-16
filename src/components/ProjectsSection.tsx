@@ -12,6 +12,7 @@ const projects = [
     image: "/projects/InDevelopment.png",
     tags: ["Java Springboot", "Docker", "Kubernetes"],
     demoUrl: "#",
+    githubUrl: "https://github.com/hamtana/AddressVerifier",
   },
 
   {
@@ -65,7 +66,7 @@ const projects = [
       "Forked a repository containing a Latex CV template and customized it to create a polished, professional CV. This project allowed me to learn the basics of LaTeX and produce a visually appealing document that effectively showcases my skills and experience.",
     image: "/projects/CV.png",
     tags: ["LaTeX"],
-    demoUrl: "#",
+    demoUrl: "https://hamtana.github.io/HPhillips-CV/",
     githubUrl: "https://github.com/hamtana/HPhillips-CV",
   },
 
