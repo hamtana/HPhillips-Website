@@ -20,17 +20,18 @@ export default async function handler(req, res) {
   // CORS
   const origin = req.headers.origin;
 
-  const allowedOrigins = [
-    "https://www.phillipsmusictech.co.nz", // custom domain with www
-    "https://phillipsmusictech.co.nz", // custom domain without www
-    "http://localhost:5173", // local dev
-    /^https:\/\/hp-.*\.vercel\.app$/.test(origin), // ✅ matches all your preview URLs
-  ];
+  const isAllowed =
+    origin === "https://phillipsmusictech.co.nz" ||
+    origin === "https://www.phillipsmusictech.co.nz" ||
+    origin === "http://localhost:5173" ||
+    /^https:\/\/hp-.*\.vercel\.app$/.test(origin);
 
-  if (!allowedOrigins.includes(origin)) {
+  if (!isAllowed) {
     return res.status(403).json({ message: "Forbidden" });
   }
 
+  // Method check
+  if (req.method !== "POST") {
   // Method check
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Only POST requests allowed" });
