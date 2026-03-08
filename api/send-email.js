@@ -16,16 +16,17 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const allowedOrigins = [
-  "https://www.phillipsmusictech.co.nz", // custom domain with www
-  "https://phillipsmusictech.co.nz", // custom domain without www
-  "http://localhost:5173", // local dev
-  /^https:\/\/hp-.*\.vercel\.app$/.test(origin), // ✅ matches all your preview URLs
-];
-
 export default async function handler(req, res) {
   // CORS
   const origin = req.headers.origin;
+
+  const allowedOrigins = [
+    "https://www.phillipsmusictech.co.nz", // custom domain with www
+    "https://phillipsmusictech.co.nz", // custom domain without www
+    "http://localhost:5173", // local dev
+    /^https:\/\/hp-.*\.vercel\.app$/.test(origin), // ✅ matches all your preview URLs
+  ];
+
   if (!allowedOrigins.includes(origin)) {
     return res.status(403).json({ message: "Forbidden" });
   }
