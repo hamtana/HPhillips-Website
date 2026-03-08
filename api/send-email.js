@@ -16,7 +16,11 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const allowedOrigins = ["https://phillipsmusictech.co.nz"];
+const allowedOrigins = [
+  "https://www.phillipsmusictech.co.nz", // custom domain with www
+  "https://phillipsmusictech.co.nz", // custom domain without www
+  "http://localhost:5173", // local dev
+];
 
 export default async function handler(req, res) {
   // CORS
