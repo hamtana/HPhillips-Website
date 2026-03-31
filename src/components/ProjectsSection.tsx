@@ -94,9 +94,9 @@ const projects = [
 
   {
     id: 8,
-    title: "CCDHB Uniform Tracker",
+    title: "Uniform Tracker",
     description:
-      "In development, building an inventory, uniform issuing and management system for Wellington Regional Hospital.",
+      "In development, building an inventory, uniform issuing and management system for a health provider.",
     image: "/projects/InDevelopment.png",
     tags: ["React", "Java Springboot", "PostgreSQL"],
     demoUrl: "#",
