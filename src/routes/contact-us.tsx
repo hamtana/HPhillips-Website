@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import type { FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { toast } from "../hooks/use-toast";
 
 export const Route = createFileRoute("/contact-us")({
   head: () => ({
@@ -73,10 +72,6 @@ function ContactUsPage() {
 
     setStatus("submitting");
     setFeedback("Sending your message...");
-    toast({
-      title: "Sending message",
-      description: "Your message is being sent now.",
-    });
 
     try {
       const response = await fetch("/api/send-email", {
@@ -95,10 +90,7 @@ function ContactUsPage() {
 
       setStatus("success");
       setFeedback(payload.message || "Message sent successfully");
-      toast({
-        title: "Message sent",
-        description: "Thanks for reaching out. I’ll reply soon.",
-      });
+
       setName("");
       setEmail("");
       setMessage("");
@@ -110,11 +102,6 @@ function ContactUsPage() {
           : "I couldn’t send your message right now. Please try again in a moment.";
 
       setFeedback(errorMessage);
-      toast({
-        title: "Message failed",
-        description: errorMessage,
-        variant: "destructive",
-      });
     }
   }
 

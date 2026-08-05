@@ -1,45 +1,40 @@
-import { Linkedin, Mail, MapPin, Send} from "lucide-react";
+import { Linkedin, Mail, MapPin, Send } from "lucide-react";
 import { cn } from "../lib/utils";
-import { toast } from "../hooks/use-toast";
 import { useState } from "react";
 
 export const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
-const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  const form = e.currentTarget;
-  const formData = new FormData(form);
-  const payload = {
-    name: formData.get("name"),
-    email: formData.get("email"),
-    message: formData.get("message"),
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) throw new Error("Email failed");
+
+      setSubmitted(true);
+    } catch (error) {
+      setSubmitError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
-
-  try {
-    const res = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    if (!res.ok) throw new Error("Email failed");
-
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-  } catch (error) {
-    toast({
-      title: "Error",
-      description: "Something went wrong. Please try again later.",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
 
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -54,58 +49,54 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div className="flex flex-col p-2 items-center space-y-8 text-center">
-            <h3 className="text-2xl font-semibold mb-6">
-            Contact Information
-            </h3>
+          <div className="flex flex-col p-2 items-center space-y-8 text-center">
+            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
-        <div className="space-y-6">
-        <div className="flex flex-col items-center space-y-2">
-            <div className="p-3 rounded-full bg-primary/10">
-            <Mail className="h-6 w-6 text-primary" />
-            </div>
-            <div>
-            <h4 className="font-medium">Email</h4>
-            <a
-                href="mailto:hamish@phillipsmusictech.co.nz"
-                className="text-muted-foreground hover:text-primary transition-colors"
-            >
-                hamish@phillipsmusictech.co.nz
-            </a>
-            </div>
-        </div>
+            <div className="space-y-6">
+              <div className="flex flex-col items-center space-y-2">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Mail className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-medium">Email</h4>
+                  <a
+                    href="mailto:hamish@phillipsmusictech.co.nz"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    hamish@phillipsmusictech.co.nz
+                  </a>
+                </div>
+              </div>
 
-        <div className="flex flex-col items-center space-y-2">
-            <div className="p-3 rounded-full bg-primary/10">
-            <MapPin className="h-6 w-6 text-primary" />
+              <div className="flex flex-col items-center space-y-2">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <MapPin className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-medium">Location</h4>
+                  <span className="text-muted-foreground hover:text-primary transition-colors">
+                    Wellington, New Zealand
+                  </span>
+                </div>
+              </div>
             </div>
-            <div>
-            <h4 className="font-medium">Location</h4>
-            <span className="text-muted-foreground hover:text-primary transition-colors">
-                Wellington, New Zealand
-            </span>
-            </div>
-        </div>
-        </div>
-
 
             {/* Other Links */}
             <div className="pt-8">
-            <h4>Connect with Me</h4>
-            <div className="flex space-x-4 justify-center">
+              <h4>Connect with Me</h4>
+              <div className="flex space-x-4 justify-center">
                 <a
-                href="https://www.linkedin.com/in/hamish-phillips-330299306/"
-                target="_blank"
-                rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/hamish-phillips-330299306/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                <Linkedin />
+                  <Linkedin />
                 </a>
+              </div>
             </div>
-            </div>
-        </div>
+          </div>
 
-                
-            <div className="bg-card p-2 rounded-lg shadow-xs" >
+          <div className="bg-card p-2 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
             <form className="space-y-6" onSubmit={handleSubmit}>
@@ -162,11 +153,21 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 />
               </div>
 
+              {submitted && (
+                <p className="text-center text-green-500 font-medium">
+                  Message sent! I'll get back to you soon.
+                </p>
+              )}
+              {submitError && (
+                <p className="text-center text-red-500 font-medium">
+                  Something went wrong. Please try again later.
+                </p>
+              )}
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || submitted}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2",
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
@@ -179,5 +180,3 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     </section>
   );
 };
-                
- 
