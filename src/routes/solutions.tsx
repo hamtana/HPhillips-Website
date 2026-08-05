@@ -183,11 +183,10 @@ function SolutionsPage() {
       </section>
 
       <section className="mt-8 space-y-4">
-        {servicePillars.map((pillar, idx) => (
+        {servicePillars.map((pillar) => (
           <article
             key={pillar.title}
-            className="island-shell tilt-card rise-in rounded-2xl p-6"
-            style={{ animationDelay: `${idx * 110 + 100}ms` }}
+            className="island-shell rounded-2xl p-6 transition hover:-translate-y-0.5 hover:border-[color-mix(in_oklab,var(--lagoon-deep)_35%,var(--line))]"
           >
             <h2 className="mb-3 text-xl font-semibold text-[var(--sea-ink)]">
               {pillar.title}
@@ -209,7 +208,7 @@ function SolutionsPage() {
           {servicesICanProvide.map((service) => (
             <article
               key={service.title}
-              className="island-shell tilt-card rounded-2xl p-5"
+              className="island-shell rounded-2xl p-5 transition hover:-translate-y-0.5 hover:border-[color-mix(in_oklab,var(--lagoon-deep)_35%,var(--line))]"
             >
               <h3 className="mb-3 text-lg font-semibold text-[var(--sea-ink)]">
                 {service.title}
@@ -232,7 +231,7 @@ function SolutionsPage() {
           {projectEvidence.map((project) => (
             <article
               key={project.name}
-              className="island-shell tilt-card rounded-2xl p-5"
+              className="island-shell rounded-2xl p-5 transition hover:-translate-y-0.5 hover:border-[color-mix(in_oklab,var(--lagoon-deep)_35%,var(--line))]"
             >
               <h3 className="mb-2 text-lg font-semibold text-[var(--sea-ink)]">
                 {project.name}
@@ -256,7 +255,7 @@ function SolutionsPage() {
       </section>
 
       <section className="mt-8 grid gap-4 lg:grid-cols-2">
-        <article className="island-shell tilt-card rounded-2xl p-6">
+        <article className="island-shell rounded-2xl p-6 transition hover:-translate-y-0.5 hover:border-[color-mix(in_oklab,var(--lagoon-deep)_35%,var(--line))]">
           <p className="island-kicker mb-2">Ideal Clients</p>
           <h2 className="mb-3 text-2xl font-semibold text-[var(--sea-ink)]">
             Who this service is best for
@@ -268,7 +267,7 @@ function SolutionsPage() {
           </ul>
         </article>
 
-        <article className="island-shell tilt-card rounded-2xl p-6">
+        <article className="island-shell rounded-2xl p-6 transition hover:-translate-y-0.5 hover:border-[color-mix(in_oklab,var(--lagoon-deep)_35%,var(--line))]">
           <p className="island-kicker mb-2">Project Fit</p>
           <h2 className="mb-3 text-2xl font-semibold text-[var(--sea-ink)]">
             Common engagements I can help with

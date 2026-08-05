@@ -140,7 +140,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
         <img
           src={project.image}
           alt={project.title}
-          className="h-full w-full object-cover transition duration-300 hover:scale-105"
+          className="h-full w-full object-cover"
         />
       </div>
       <div className="p-5">
