@@ -63,48 +63,66 @@ export default function Header() {
           <div className="mt-1 flex flex-col gap-y-2 rounded-2xl border border-[var(--line)] bg-[var(--surface-strong)] p-4 sm:mt-0 sm:flex-row sm:items-center sm:gap-x-4 sm:gap-y-1 sm:border-0 sm:bg-transparent sm:p-0 sm:pb-0">
             <Link
               to="/"
-              className="nav-link"
-              activeProps={{ className: "nav-link is-active" }}
+              className="inline-flex items-center justify-center rounded-full border border-[var(--chip-line)] bg-[var(--chip-bg)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]"
+              activeProps={{
+                className:
+                  "inline-flex items-center justify-center rounded-full border border-[var(--lagoon-deep)] bg-[rgba(47,158,222,0.14)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]",
+              }}
               onClick={closeMobileMenu}
             >
               Home
             </Link>
             <Link
               to="/about-us"
-              className="nav-link"
-              activeProps={{ className: "nav-link is-active" }}
+              className="inline-flex items-center justify-center rounded-full border border-[var(--chip-line)] bg-[var(--chip-bg)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]"
+              activeProps={{
+                className:
+                  "inline-flex items-center justify-center rounded-full border border-[var(--lagoon-deep)] bg-[rgba(47,158,222,0.14)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]",
+              }}
               onClick={closeMobileMenu}
             >
               About Us
             </Link>
             <Link
               to="/solutions"
-              className="nav-link"
-              activeProps={{ className: "nav-link is-active" }}
+              className="inline-flex items-center justify-center rounded-full border border-[var(--chip-line)] bg-[var(--chip-bg)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]"
+              activeProps={{
+                className:
+                  "inline-flex items-center justify-center rounded-full border border-[var(--lagoon-deep)] bg-[rgba(47,158,222,0.14)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]",
+              }}
               onClick={closeMobileMenu}
             >
               Solutions
             </Link>
             <Link
               to="/projects"
-              className="nav-link"
-              activeProps={{ className: "nav-link is-active" }}
+              className="inline-flex items-center justify-center rounded-full border border-[var(--chip-line)] bg-[var(--chip-bg)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]"
+              activeProps={{
+                className:
+                  "inline-flex items-center justify-center rounded-full border border-[var(--lagoon-deep)] bg-[rgba(47,158,222,0.14)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]",
+              }}
               onClick={closeMobileMenu}
             >
               Projects
             </Link>
             <Link
               to="/music"
-              className="nav-link"
-              activeProps={{ className: "nav-link is-active" }}
+              className="inline-flex items-center justify-center rounded-full border border-[var(--chip-line)] bg-[var(--chip-bg)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]"
+              activeProps={{
+                className:
+                  "inline-flex items-center justify-center rounded-full border border-[var(--lagoon-deep)] bg-[rgba(47,158,222,0.14)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]",
+              }}
               onClick={closeMobileMenu}
             >
               Music
             </Link>
             <Link
               to="/contact-us"
-              className="nav-link"
-              activeProps={{ className: "nav-link is-active" }}
+              className="inline-flex items-center justify-center rounded-full border border-[var(--chip-line)] bg-[var(--chip-bg)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]"
+              activeProps={{
+                className:
+                  "inline-flex items-center justify-center rounded-full border border-[var(--lagoon-deep)] bg-[rgba(47,158,222,0.14)] px-4 py-2 text-[var(--sea-ink)] no-underline shadow-[0_6px_18px_rgba(22,77,130,0.12)] transition hover:-translate-y-0.5 hover:bg-[var(--link-bg-hover)]",
+              }}
               onClick={closeMobileMenu}
             >
               Contact Us

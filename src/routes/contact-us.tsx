@@ -104,17 +104,15 @@ function ContactUsPage() {
       setMessage("");
     } catch (error) {
       setStatus("error");
-      setFeedback(
+      const errorMessage =
         error instanceof Error
           ? error.message
-          : "Something went wrong while sending your message",
-      );
+          : "I couldn’t send your message right now. Please try again in a moment.";
+
+      setFeedback(errorMessage);
       toast({
         title: "Message failed",
-        description:
-          error instanceof Error
-            ? error.message
-            : "Something went wrong while sending your message",
+        description: errorMessage,
         variant: "destructive",
       });
     }
@@ -212,7 +210,7 @@ function ContactUsPage() {
               status === "success"
                 ? "border-[rgba(47,106,74,0.3)] bg-[rgba(47,106,74,0.12)] text-[var(--palm)]"
                 : status === "error"
-                  ? "border-[rgba(164,55,55,0.32)] bg-[rgba(164,55,55,0.12)] text-[#8f3030]"
+                  ? "border-[rgba(255,196,196,0.34)] bg-[rgba(111,28,28,0.9)] text-[#fff5f5]"
                   : "border-[var(--line)] bg-[var(--surface-strong)] text-[var(--sea-ink-soft)]"
             }`}
           >
