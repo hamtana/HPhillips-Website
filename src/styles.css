@@ -171,6 +171,7 @@ body {
   background:
     radial-gradient(1100px 620px at -8% -10%, var(--hero-a), transparent 58%),
     radial-gradient(1050px 620px at 112% -12%, var(--hero-b), transparent 62%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, transparent 32%),
     radial-gradient(
       720px 380px at 50% 115%,
       rgba(63, 210, 255, 0.16),
@@ -220,10 +221,10 @@ body::after {
   z-index: -1;
   opacity: 0.14;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 28px 28px;
-  mask-image: radial-gradient(circle at 50% 30%, black, transparent 78%);
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at 50% 30%, black, transparent 84%);
 }
 
 a {
@@ -262,7 +263,7 @@ pre code {
 }
 
 .page-wrap {
-  width: min(1080px, calc(100% - 2rem));
+  width: min(1120px, calc(100% - 1.75rem));
   margin-inline: auto;
 }
 
@@ -271,13 +272,22 @@ pre code {
 }
 
 .island-shell {
-  border: 1px solid var(--line);
-  background: linear-gradient(165deg, var(--surface-strong), var(--surface));
+  position: relative;
+  border: 1px solid color-mix(in oklab, var(--line) 65%, white 35%);
+  background:
+    linear-gradient(
+      165deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(244, 249, 253, 0.92)
+    ),
+    var(--surface-strong);
   box-shadow:
-    0 1px 0 var(--inset-glint) inset,
-    0 22px 44px rgba(13, 31, 56, 0.46),
-    0 6px 18px rgba(13, 31, 56, 0.35);
-  backdrop-filter: blur(4px);
+    0 1px 0 rgba(255, 255, 255, 0.75) inset,
+    0 18px 36px rgba(27, 58, 92, 0.12),
+    0 3px 10px rgba(27, 58, 92, 0.08);
+  backdrop-filter: none;
+  border-radius: 1.35rem;
+  overflow: hidden;
 }
 
 .light .island-shell {
@@ -285,35 +295,49 @@ pre code {
 }
 
 .island-shell :is(h1, h2, h3, p, li, label, span) {
-  text-shadow: 0 1px 1px rgba(3, 11, 22, 0.55);
+  text-shadow: none;
 }
 
 .light .island-shell :is(h1, h2, h3, p, li, label, span) {
   text-shadow: none;
 }
 
+.island-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(30, 120, 182, 0.1), transparent 16%),
+    radial-gradient(
+      circle at top right,
+      rgba(42, 168, 200, 0.08),
+      transparent 30%
+    );
+  pointer-events: none;
+}
+
 .feature-card {
   background: linear-gradient(
     165deg,
-    color-mix(in oklab, var(--surface-strong) 93%, white 7%),
-    var(--surface)
+    rgba(255, 255, 255, 0.95),
+    rgba(241, 247, 252, 0.92)
   );
   box-shadow:
-    0 1px 0 var(--inset-glint) inset,
-    0 18px 34px rgba(16, 40, 71, 0.34),
-    0 4px 14px rgba(12, 32, 59, 0.28);
+    0 1px 0 rgba(255, 255, 255, 0.78) inset,
+    0 16px 28px rgba(27, 58, 92, 0.1),
+    0 3px 10px rgba(27, 58, 92, 0.06);
 }
 
 .feature-card:hover {
-  transform: translateY(-2px);
-  border-color: color-mix(in oklab, var(--lagoon-deep) 35%, var(--line));
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--lagoon-deep) 45%, white 55%);
 }
 
 .tilt-card {
   position: relative;
   transform-style: preserve-3d;
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0);
-  animation: card-float-3d 8s ease-in-out infinite;
+  transform: translateZ(0);
+  animation: none;
 }
 
 .tilt-card::before {
@@ -332,15 +356,15 @@ pre code {
 }
 
 .tilt-card:hover {
-  transform: perspective(1000px) rotateX(4deg) rotateY(-5deg) translateZ(8px);
+  transform: translateY(-3px);
   box-shadow:
-    0 1px 0 var(--inset-glint) inset,
-    0 26px 50px rgba(20, 61, 110, 0.45),
-    0 10px 22px rgba(20, 61, 110, 0.3);
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 20px 34px rgba(27, 58, 92, 0.12),
+    0 5px 14px rgba(27, 58, 92, 0.08);
 }
 
 .tilt-card > * {
-  transform: translateZ(20px);
+  transform: none;
 }
 
 .three-d-hero {
@@ -388,7 +412,46 @@ pre code {
 .hero-orb {
   filter: blur(0.2px);
   transform-style: preserve-3d;
-  animation: orb-drift 9s ease-in-out infinite;
+  inset: 0;
+  border-radius: inherit;
+
+  background:
+    linear-gradient(90deg, rgba(30, 120, 182, 0.08), transparent 24%),
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(42, 168, 200, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(circle at 84% 16%, rgba(30, 120, 182, 0.1), transparent 26%);
+  animation-delay: 850ms;
+}
+
+.hero-orb-c {
+  animation-delay: 1700ms;
+  position: absolute;
+  left: clamp(0.8rem, 2vw, 1.3rem);
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--lagoon), var(--lagoon-deep));
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.8),
+    0 8px 22px rgba(30, 120, 182, 0.22);
+  transform: none;
+  animation: none;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.three-d-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-orb {
+  filter: none;
+  opacity: 0.7;
 }
 
 .hero-orb-a {
@@ -403,26 +466,8 @@ pre code {
   animation-delay: 1700ms;
 }
 
-button,
-.island-shell,
-a {
-  transition:
-    background-color 180ms ease,
-    color 180ms ease,
-    border-color 180ms ease,
-    transform 180ms ease;
-}
-
-.island-kicker {
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.69rem;
-  color: var(--kicker);
-}
-
-.light .nav-link::after {
-  background: linear-gradient(90deg, var(--lagoon-deep), #5cb4d8);
+.light .hero-orb {
+  opacity: 0.55;
 }
 
 .nav-link {
@@ -502,7 +547,7 @@ a {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  background: color-mix(in oklab, var(--header-bg) 84%, transparent 16%);
+  background: color-mix(in oklab, var(--header-bg) 92%, white 8%);
 }
 
 @media (prefers-reduced-motion: reduce) {
