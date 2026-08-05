@@ -280,8 +280,16 @@ pre code {
   backdrop-filter: blur(4px);
 }
 
+.light .island-shell {
+  backdrop-filter: none;
+}
+
 .island-shell :is(h1, h2, h3, p, li, label, span) {
   text-shadow: 0 1px 1px rgba(3, 11, 22, 0.55);
+}
+
+.light .island-shell :is(h1, h2, h3, p, li, label, span) {
+  text-shadow: none;
 }
 
 .feature-card {
@@ -411,6 +419,10 @@ a {
   font-weight: 700;
   font-size: 0.69rem;
   color: var(--kicker);
+}
+
+.light .nav-link::after {
+  background: linear-gradient(90deg, var(--lagoon-deep), #5cb4d8);
 }
 
 .nav-link {
