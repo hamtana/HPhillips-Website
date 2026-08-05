@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import validator from "validator";
 
 const requests = new Map();
@@ -21,27 +21,15 @@ function rateLimit(ip) {
   return entry.count <= max;
 }
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_PASS,
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+const fromAddress =
+  process.env.RESEND_FROM_EMAIL ||
+  "Phillips Music and Tech <hamish@phillipsmusictech.co.nz>";
+const toAddress =
+  process.env.CONTACT_TO_EMAIL || "hamish@phillipsmusictech.co.nz";
 
 export default async function handler(req, res) {
-  const origin = req.headers.origin;
-
-  const isAllowed =
-    origin === "https://phillipsmusictech.co.nz" ||
-    origin === "https://www.phillipsmusictech.co.nz" ||
-    origin === "http://localhost:5173" ||
-    /^https:\/\/hp-.*\.vercel\.app$/.test(origin);
-
-  if (!isAllowed) {
-    return res.status(403).json({ message: "Forbidden" });
-  }
-
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Only POST requests allowed" });
   }
@@ -69,14 +57,22 @@ export default async function handler(req, res) {
 
   const safeName = name.replace(/[\r\n]/g, " ").trim();
 
+  if (!process.env.RESEND_API_KEY) {
+    return res.status(500).json({ message: "Email service is not configured" });
+  }
+
   try {
-    await transporter.sendMail({
-      from: `"${safeName}" <${process.env.GMAIL_USER}>`,
+    const { error } = await resend.emails.send({
+      from: fromAddress,
+      to: toAddress,
       replyTo: email,
-      to: process.env.GMAIL_USER,
       subject: `Contact form message from ${safeName}`,
       text: `Message:\n${message}\n\nFrom: ${safeName} <${email}>`,
     });
+
+    if (error) {
+      throw error;
+    }
 
     res.status(200).json({ message: "Email sent successfully" });
   } catch (err) {
