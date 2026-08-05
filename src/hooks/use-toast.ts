@@ -18,6 +18,7 @@ type Toast = {
   description?: string;
   open: boolean;
   action?: React.ReactNode; // ✅ add this
+  variant?: "default" | "destructive";
   onOpenChange?: (open: boolean) => void;
 };
 
@@ -71,7 +72,7 @@ function reducer(state: ToastState, action: ToastAction): ToastState {
       return {
         ...state,
         toasts: state.toasts.map((t) =>
-          t.id === action.toast.id ? { ...t, ...action.toast } : t
+          t.id === action.toast.id ? { ...t, ...action.toast } : t,
         ),
       };
 
@@ -87,9 +88,7 @@ function reducer(state: ToastState, action: ToastAction): ToastState {
       return {
         ...state,
         toasts: state.toasts.map((t) =>
-          toastId === undefined || t.id === toastId
-            ? { ...t, open: false }
-            : t
+          toastId === undefined || t.id === toastId ? { ...t, open: false } : t,
         ),
       };
     }

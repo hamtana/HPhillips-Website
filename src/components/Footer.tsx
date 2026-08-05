@@ -1,15 +1,19 @@
-import { ArrowUp } from "lucide-react"
+export default function Footer() {
+  const year = new Date().getFullYear();
 
-
-export const Footer = () => {
-    return (
-        <footer className="py-12 px-4 bg-card relative border-t border-border mt-12 pt-8 flex flex-wrap justify-between items-center">
-            {" "}
-            <p className="text-sm text-muted-foreground"> &copy; {new Date().getFullYear()} Phillips Music & Tech, All Rights Reserved.</p>
-
-            <a href="#hero" className="p-2 round-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors">
-                <ArrowUp />
-            </a>
-        </footer>
-    )
+  return (
+    <footer className="mt-20 border-t border-[var(--line)] px-4 pb-14 pt-10 text-[var(--sea-ink-soft)]">
+      <div className="page-wrap flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+        <p className="m-0 text-sm">
+          &copy; {year} Phillips Music and Tech. All rights reserved.
+        </p>
+        <p className="island-kicker m-0">Built with TanStack Router + Start</p>
+      </div>
+      <div className="mt-4 flex justify-center gap-4 text-sm">
+        <a href="mailto:hamish@phillipsmusictech.co.nz" className="nav-link">
+          hamish@phillipsmusictech.co.nz
+        </a>
+      </div>
+    </footer>
+  );
 }
