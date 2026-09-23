@@ -50,9 +50,9 @@ function App() {
           Phillips Music and Tech.
         </h1>
         <p className="mb-8 max-w-2xl text-base text-[var(--sea-ink-soft)] sm:text-lg">
-          A trading brand focused on software engineering, live sound, and audio
-          production. We bring creative energy and technical precision to every
-          project.
+          Run by Hamish Phillips, software development, live sound and audio
+          production services tailored to practical business and creative
+          outcomes.
         </p>
         <div className="flex flex-wrap gap-3">
           <Link
