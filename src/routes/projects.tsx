@@ -11,6 +11,14 @@ type ProjectItem = {
 
 const softwareProjects: ProjectItem[] = [
   {
+    title: "EV Autos",
+    description:
+      "A booking and information platform for a Hutt Valley automotive workshop, with a backend management dashboard for the client.",
+    image: "/projects/EvAutos-Image.png",
+    tags: ["Tanstack Start", "Tanstack Router", "Neon PostgresSQL"],
+    demoUrl: "https://evautos.co.nz",
+  },
+  {
     title: "Address Verifier",
     description:
       "Developing an API that integrates with LINZ data to verify addresses across New Zealand and return JSON address data for form prefill.",
