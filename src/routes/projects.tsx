@@ -105,7 +105,7 @@ const softwareManagementProjects: ProjectItem[] = [
   {
     title: "Nichols Website Management",
     description:
-      "Ongoing website management for a New Zealand business in the lower South Island over the past three years.",
+      "Provided website managment for Nichol's Garden, Pet and Landscape Centres since 2022",
     image: "/projects/nichols.png",
     tags: ["DNM Framework", "HTML", "CSS"],
     demoUrl: "https://nichols.co.nz",
