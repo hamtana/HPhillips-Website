@@ -13,7 +13,7 @@ const softwareProjects: ProjectItem[] = [
   {
     title: "Nichol's Website 2.0",
     description:
-      "Developing a new website solution for Nichol's Garden, Pet and Landscape Centre. To be released late 2026",
+      "Developing a new website solution for Nichol's Garden, Pet and Landscape Centre. To be released late 2026.",
     image: "/projects/Nichols-2.0-Website.png",
     tags: ["Wordpress", "WooCommerce", "IdealPOS", "TailwindCSS"],
   },

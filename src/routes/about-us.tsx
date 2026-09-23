@@ -102,6 +102,41 @@ function AboutUsPage() {
           </a>
         </div>
       </section>
+
+      {/* Certificates and Certifications */}
+      <section className="island-shell mt-8 rounded-2xl p-6">
+        <p className="island-kicker mb-2">Certificates and Certifications</p>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            [
+              "Boot.dev Linux and Bash Fundamentals",
+              "certificates/bootdev-linux-bash-fundamentals.jpeg",
+            ],
+            [
+              "Boot.dev Introduction to Python Course",
+              "/certificates/bootdev-introduction-to-python.jpeg",
+            ],
+          ].map(([title, url], idx) => (
+            <article
+              key={title}
+              className="island-shell tilt-card rise-in rounded-2xl p-5"
+              style={{ animationDelay: `${idx * 100 + 90}ms` }}
+            >
+              <h2 className="mb-2 text-base font-semibold text-[var(--sea-ink)]">
+                {title}
+              </h2>
+              <a
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-[var(--sea-ink-soft)] underline"
+              >
+                View Certificate
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
