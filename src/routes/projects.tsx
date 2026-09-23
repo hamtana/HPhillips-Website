@@ -11,6 +11,13 @@ type ProjectItem = {
 
 const softwareProjects: ProjectItem[] = [
   {
+    title: "Nichol's Website 2.0",
+    description:
+      "Developing a new website solution for Nichol's Garden, Pet and Landscape Centre. To be released late 2026",
+    image: "/projects/Nichols-2.0-Website.png",
+    tags: ["Wordpress", "WooCommerce", "IdealPOS", "TailwindCSS"],
+  },
+  {
     title: "EV Autos",
     description:
       "A booking and information platform for a Hutt Valley automotive workshop, with a backend management dashboard for the client.",
@@ -84,14 +91,14 @@ const softwareProjects: ProjectItem[] = [
     demoUrl: "https://phillipsmusictech.co.nz",
     githubUrl: "https://github.com/hamtana/HPhillips-Website",
   },
-  {
-    title: "Uniform Tracker",
-    description:
-      "In development: an inventory and uniform issue/management system for a healthcare provider.",
-    image: "/projects/InDevelopment.png",
-    tags: ["React", "Java Spring Boot", "PostgreSQL"],
-    githubUrl: "https://github.com/hamtana/Uniform-Tracker",
-  },
+  // {
+  //   title: "Uniform Tracker",
+  //   description:
+  //     "In development: an inventory and uniform issue/management system for a healthcare provider.",
+  //   image: "/projects/InDevelopment.png",
+  //   tags: ["React", "Java Spring Boot", "PostgreSQL"],
+  //   githubUrl: "https://github.com/hamtana/Uniform-Tracker",
+  // },
 ];
 
 const softwareManagementProjects: ProjectItem[] = [
