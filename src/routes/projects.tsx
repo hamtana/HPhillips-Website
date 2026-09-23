@@ -14,7 +14,7 @@ const softwareProjects: ProjectItem[] = [
     title: "EV Autos",
     description:
       "A booking and information platform for a Hutt Valley automotive workshop, with a backend management dashboard for the client.",
-    image: "/projects/EvAutos-Image.png",
+    image: "/projects/EVAutos-Image.png",
     tags: ["Tanstack Start", "Tanstack Router", "Neon PostgresSQL"],
     demoUrl: "https://evautos.co.nz",
   },
