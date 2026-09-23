@@ -69,8 +69,7 @@ function MusicPage() {
         </h1>
         <p className="max-w-3xl text-base leading-8 text-[var(--sea-ink-soft)]">
           I have hands-on experience in live sound engineering, studio
-          production, and performance. My focus is creating polished,
-          audience-ready sound while preserving musical intent and feel.
+          production, and performance.
         </p>
       </section>
 

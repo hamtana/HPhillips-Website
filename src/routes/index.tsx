@@ -95,7 +95,7 @@ function App() {
           ],
           [
             "Music",
-            "Live sound, music production, and performance work with embedded tracks.",
+            "Live sound, music production, and performance work",
             "/music",
           ],
           [
