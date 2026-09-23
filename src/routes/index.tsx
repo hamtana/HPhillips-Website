@@ -129,8 +129,7 @@ function App() {
         <p className="island-kicker mb-2">What I Do</p>
         <ul className="m-0 list-disc space-y-2 pl-5 text-sm text-[var(--sea-ink-soft)]">
           <li>
-            Build clean, reliable software with TanStack, React, and modern
-            deployment workflows.
+            Build clean and reliable software with modern deployment workflows.
           </li>
           <li>
             Produce and deliver high-quality live and studio audio experiences.
