@@ -9,7 +9,7 @@
   "labels": ["dependencies", "security"],
   "vulnerabilityAlerts": {
     "enabled": true,
-    "automerge": true,
+    "automerge": false,
     "labels": ["security", "dependencies"]
   },
   "osvVulnerabilityAlerts": true,

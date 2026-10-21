@@ -1,174 +1,237 @@
 globalThis.__nitro_main__ = import.meta.url;
-import { a as defineLazyEventHandler, c as serve, i as defineHandler, n as HTTPError, o as toEventHandler, s as NodeResponse, t as H3Core } from "./_libs/h3+rou3+srvx.mjs";
+import { a as toEventHandler, c as serve, i as defineLazyEventHandler, n as HTTPError, r as defineHandler, s as NodeResponse, t as H3Core } from "./_libs/h3+rou3+srvx.mjs";
 import { i as withoutTrailingSlash, n as joinURL, r as withLeadingSlash, t as decodePath } from "./_libs/ufo.mjs";
 import { promises } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
-//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.5_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/runtime/internal/route-rules.mjs
+//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.6_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/runtime/internal/route-rules.mjs
 var headers = ((m) => function headersRouteRule(event) {
 	for (const [key, value] of Object.entries(m.options || {})) event.res.headers.set(key, value);
 });
 //#endregion
 //#region #nitro/virtual/public-assets-data
 var public_assets_data_default = {
-	"/.DS_Store": {
-		"type": "text/plain; charset=utf-8",
-		"etag": "\"1804-1zj/dtYulwudBOeJ2zosUCxSpZs\"",
-		"mtime": "2026-07-26T08:12:28.973Z",
-		"size": 6148,
-		"path": "../public/.DS_Store"
-	},
 	"/robots.txt": {
 		"type": "text/plain; charset=utf-8",
 		"etag": "\"1a-Ww60UaGmGdV+XIDLkNZIDigz3YA\"",
-		"mtime": "2026-07-26T08:12:28.974Z",
+		"mtime": "2026-10-21T03:21:01.352Z",
 		"size": 26,
 		"path": "../public/robots.txt"
 	},
 	"/vite.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"5d9-9/Odcje3kalF1Spc16j7Nl8xM2Y\"",
-		"mtime": "2026-07-26T08:12:28.974Z",
+		"mtime": "2026-10-21T03:21:01.352Z",
 		"size": 1497,
 		"path": "../public/vite.svg"
 	},
-	"/assets/about-C5kPCLv_.js": {
+	"/assets/about-us-7c2TYIH9.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"2d3-jUU0qWeo/DgGojWLL4olWkEtjn8\"",
-		"mtime": "2026-07-26T08:12:28.828Z",
-		"size": 723,
-		"path": "../public/assets/about-C5kPCLv_.js"
+		"etag": "\"dd3-mP22F5xHhZuFXaAE881tgP9wtxY\"",
+		"mtime": "2026-10-21T03:21:00.949Z",
+		"size": 3539,
+		"path": "../public/assets/about-us-7c2TYIH9.js"
+	},
+	"/assets/contact-us-DWGxEn_Q.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"1160-EagNTsY51eootq1M+igdIcQcBDw\"",
+		"mtime": "2026-10-21T03:21:00.949Z",
+		"size": 4448,
+		"path": "../public/assets/contact-us-DWGxEn_Q.js"
+	},
+	"/assets/music-DmiLuWlu.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"b1b-nm5cd4pq9SOS/Jo5VeMhov1qhqc\"",
+		"mtime": "2026-10-21T03:21:00.949Z",
+		"size": 2843,
+		"path": "../public/assets/music-DmiLuWlu.js"
+	},
+	"/assets/projects-BGOYVbdf.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"1579-iAWxMNZAIe9Yape2aolHqkkEXlY\"",
+		"mtime": "2026-10-21T03:21:00.949Z",
+		"size": 5497,
+		"path": "../public/assets/projects-BGOYVbdf.js"
+	},
+	"/assets/index-BsjRCHxQ.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"57064-wMbEETX07KKA4oeKlDC5TkN6aY0\"",
+		"mtime": "2026-10-21T03:21:00.948Z",
+		"size": 356452,
+		"path": "../public/assets/index-BsjRCHxQ.js"
+	},
+	"/assets/routes-B4AlEDtl.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"ed5-JYcWq+p9g4acYxhuWhsdmXHwpYo\"",
+		"mtime": "2026-10-21T03:21:00.949Z",
+		"size": 3797,
+		"path": "../public/assets/routes-B4AlEDtl.js"
+	},
+	"/assets/solutions-DMOrtTUN.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"2367-cfNz8SVx7HfdC8Oy067q11IuUds\"",
+		"mtime": "2026-10-21T03:21:00.949Z",
+		"size": 9063,
+		"path": "../public/assets/solutions-DMOrtTUN.js"
+	},
+	"/assets/styles-CMSNTvQi.css": {
+		"type": "text/css; charset=utf-8",
+		"etag": "\"aca9-D6cDk4QlVAOYdgZ8JrxVVQnMQt4\"",
+		"mtime": "2026-10-21T03:21:00.949Z",
+		"size": 44201,
+		"path": "../public/assets/styles-CMSNTvQi.css"
 	},
 	"/assets/react.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"101e-9QXdyOvla9xR77ch7wSSOo0waN0\"",
-		"mtime": "2026-07-26T08:12:28.974Z",
+		"mtime": "2026-10-21T03:21:01.352Z",
 		"size": 4126,
 		"path": "../public/assets/react.svg"
 	},
-	"/assets/routes-fZ1PSw1A.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"ced-Jfs4kH4rgT9NpoNbjrGbUEGTqw8\"",
-		"mtime": "2026-07-26T08:12:28.828Z",
-		"size": 3309,
-		"path": "../public/assets/routes-fZ1PSw1A.js"
+	"/certificates/bootdev-introduction-to-python.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"b007-1Fp7D6Py2cxuS6CTiGAGQ6y5TVI\"",
+		"mtime": "2026-10-21T03:21:01.351Z",
+		"size": 45063,
+		"path": "../public/certificates/bootdev-introduction-to-python.jpeg"
 	},
-	"/assets/styles-CA54bOK_.css": {
-		"type": "text/css; charset=utf-8",
-		"etag": "\"a981-706O9uzjYrnQAIz91jcRmxo1/MY\"",
-		"mtime": "2026-07-26T08:12:28.829Z",
-		"size": 43393,
-		"path": "../public/assets/styles-CA54bOK_.css"
-	},
-	"/assets/index-CkuD7HLa.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"4eef2-d5wHG2sTGhdogTPhDUakT6v+72M\"",
-		"mtime": "2026-07-26T08:12:28.828Z",
-		"size": 323314,
-		"path": "../public/assets/index-CkuD7HLa.js"
+	"/certificates/bootdev-linux-bash-fundamentals.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"a842-MlA3MX+45zTRqpYQ9d99a84+Cd4\"",
+		"mtime": "2026-10-21T03:21:01.351Z",
+		"size": 43074,
+		"path": "../public/certificates/bootdev-linux-bash-fundamentals.jpeg"
 	},
 	"/projects/CV.png": {
 		"type": "image/png",
 		"etag": "\"2edd0-SGKQHhYIUgB1LRaqVBTNQPAI29c\"",
-		"mtime": "2026-07-26T08:12:28.955Z",
+		"mtime": "2026-10-21T03:21:01.351Z",
 		"size": 191952,
 		"path": "../public/projects/CV.png"
 	},
-	"/projects/project1.png": {
+	"/favicon.ico": {
+		"type": "image/vnd.microsoft.icon",
+		"etag": "\"a3d0b-nalvd6oh3HfRNgznrgxakauR9E8\"",
+		"mtime": "2026-10-21T03:21:01.352Z",
+		"size": 670987,
+		"path": "../public/favicon.ico"
+	},
+	"/logo.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"86330-oRAy/xjG/j6iA8ngWPKgszDhk0I\"",
+		"mtime": "2026-10-21T03:21:01.352Z",
+		"size": 549680,
+		"path": "../public/logo.jpeg"
+	},
+	"/logo/Logo-V3.png": {
 		"type": "image/png",
-		"etag": "\"a2ba-CoTktp2o+0RZDFDVR8XAIg6HVn0\"",
-		"mtime": "2026-07-26T08:12:28.968Z",
-		"size": 41658,
-		"path": "../public/projects/project1.png"
+		"etag": "\"a3d0b-nalvd6oh3HfRNgznrgxakauR9E8\"",
+		"mtime": "2026-10-21T03:21:01.351Z",
+		"size": 670987,
+		"path": "../public/logo/Logo-V3.png"
+	},
+	"/logo/logo-v2.png": {
+		"type": "image/png",
+		"etag": "\"149973-ziC26yhA7bnfNrvaBgIg/gqjjfc\"",
+		"mtime": "2026-10-21T03:21:01.351Z",
+		"size": 1350003,
+		"path": "../public/logo/logo-v2.png"
+	},
+	"/projects/EVAutos-Image.png": {
+		"type": "image/png",
+		"etag": "\"1aed34-wuVBol5hyYTLUohh+aCYX5H4Xd8\"",
+		"mtime": "2026-10-21T03:21:01.351Z",
+		"size": 1764660,
+		"path": "../public/projects/EVAutos-Image.png"
+	},
+	"/projects/imageNotAvailable.png": {
+		"type": "image/png",
+		"etag": "\"136e53-jT3GoMzdxshzPxpmL+/PshiCKQA\"",
+		"mtime": "2026-10-21T03:21:01.351Z",
+		"size": 1273427,
+		"path": "../public/projects/imageNotAvailable.png"
 	},
 	"/projects/reviewEngine.png": {
 		"type": "image/png",
 		"etag": "\"2164-btAxzki7IsUFc1IQdk2w53qoWfc\"",
-		"mtime": "2026-07-26T08:12:28.966Z",
+		"mtime": "2026-10-21T03:21:01.352Z",
 		"size": 8548,
 		"path": "../public/projects/reviewEngine.png"
+	},
+	"/projects/project1.png": {
+		"type": "image/png",
+		"etag": "\"a2ba-CoTktp2o+0RZDFDVR8XAIg6HVn0\"",
+		"mtime": "2026-10-21T03:21:01.351Z",
+		"size": 41658,
+		"path": "../public/projects/project1.png"
 	},
 	"/projects/project2.png": {
 		"type": "image/png",
 		"etag": "\"1bcd0-TD8Ngci5gh8pF8EYQGp3q9FpAC0\"",
-		"mtime": "2026-07-26T08:12:28.969Z",
+		"mtime": "2026-10-21T03:21:01.351Z",
 		"size": 113872,
 		"path": "../public/projects/project2.png"
 	},
 	"/projects/reviewEngine-2.png": {
 		"type": "image/png",
 		"etag": "\"d331-EDcKeyrrIUw0wH5oXbFG+b53Qi8\"",
-		"mtime": "2026-07-26T08:12:28.969Z",
+		"mtime": "2026-10-21T03:21:01.351Z",
 		"size": 54065,
 		"path": "../public/projects/reviewEngine-2.png"
-	},
-	"/logo.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"86330-oRAy/xjG/j6iA8ngWPKgszDhk0I\"",
-		"mtime": "2026-07-26T08:12:28.976Z",
-		"size": 549680,
-		"path": "../public/logo.jpeg"
 	},
 	"/projects/sp-circle-logo.png": {
 		"type": "image/png",
 		"etag": "\"6a12a-kLOJMp3wnmXVXbQcjHRwgbmiZOg\"",
-		"mtime": "2026-07-26T08:12:28.972Z",
+		"mtime": "2026-10-21T03:21:01.352Z",
 		"size": 434474,
 		"path": "../public/projects/sp-circle-logo.png"
 	},
 	"/projects/sp-flat-logo.png": {
 		"type": "image/png",
 		"etag": "\"5a60c-770J484o1qWP2g/OdR80tkXDfnU\"",
-		"mtime": "2026-07-26T08:12:28.972Z",
+		"mtime": "2026-10-21T03:21:01.352Z",
 		"size": 370188,
 		"path": "../public/projects/sp-flat-logo.png"
-	},
-	"/logo/logo-v2.png": {
-		"type": "image/png",
-		"etag": "\"149973-ziC26yhA7bnfNrvaBgIg/gqjjfc\"",
-		"mtime": "2026-07-26T08:12:28.956Z",
-		"size": 1350003,
-		"path": "../public/logo/logo-v2.png"
-	},
-	"/projects/imageNotAvailable.png": {
-		"type": "image/png",
-		"etag": "\"136e53-jT3GoMzdxshzPxpmL+/PshiCKQA\"",
-		"mtime": "2026-07-26T08:12:28.966Z",
-		"size": 1273427,
-		"path": "../public/projects/imageNotAvailable.png"
-	},
-	"/projects/nichols.png": {
-		"type": "image/png",
-		"etag": "\"16c8f4-8lhVkJAQ+DUFh+/gErAPIAT04+A\"",
-		"mtime": "2026-07-26T08:12:28.976Z",
-		"size": 1493236,
-		"path": "../public/projects/nichols.png"
 	},
 	"/projects/InDevelopment.png": {
 		"type": "image/png",
 		"etag": "\"1c770e-XyqH2543Hs8n+qCrLt8y7dr3odk\"",
-		"mtime": "2026-07-26T08:12:28.966Z",
+		"mtime": "2026-10-21T03:21:01.351Z",
 		"size": 1865486,
 		"path": "../public/projects/InDevelopment.png"
+	},
+	"/projects/Nichols-2.0-Website.png": {
+		"type": "image/png",
+		"etag": "\"295ab1-sgcYdVJfdG6jN9fS+yvIK2nSLgw\"",
+		"mtime": "2026-10-21T03:21:01.351Z",
+		"size": 2710193,
+		"path": "../public/projects/Nichols-2.0-Website.png"
+	},
+	"/projects/nichols.png": {
+		"type": "image/png",
+		"etag": "\"16c8f4-8lhVkJAQ+DUFh+/gErAPIAT04+A\"",
+		"mtime": "2026-10-21T03:21:01.351Z",
+		"size": 1493236,
+		"path": "../public/projects/nichols.png"
 	},
 	"/audio/WhatGoesAround.mp3": {
 		"type": "audio/mpeg",
 		"etag": "\"4f623f-LnUnNnhVGvFYrHkZyqDbbvIgO9k\"",
-		"mtime": "2026-07-26T08:12:28.978Z",
+		"mtime": "2026-10-21T03:21:01.351Z",
 		"size": 5202495,
 		"path": "../public/audio/WhatGoesAround.mp3"
 	},
 	"/audio/Runaway.mp3": {
 		"type": "audio/mpeg",
 		"etag": "\"902500-MQsxsdcz9Tzre75kK8regSg57BQ\"",
-		"mtime": "2026-07-26T08:12:28.966Z",
+		"mtime": "2026-10-21T03:21:01.351Z",
 		"size": 9446656,
 		"path": "../public/audio/Runaway.mp3"
 	},
 	"/audio/Floating.mp3": {
 		"type": "audio/mpeg",
 		"etag": "\"ef5d3a-oJ1F8AyY+YHf8NfzDqOaWHNvhoM\"",
-		"mtime": "2026-07-26T08:12:28.968Z",
+		"mtime": "2026-10-21T03:21:01.351Z",
 		"size": 15686970,
 		"path": "../public/audio/Floating.mp3"
 	}
@@ -191,7 +254,7 @@ function getAsset(id) {
 	return public_assets_data_default[id];
 }
 //#endregion
-//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.5_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/runtime/internal/static.mjs
+//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.6_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/runtime/internal/static.mjs
 var METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
 var EncodingMap = {
 	gzip: ".gz",
@@ -260,11 +323,11 @@ var findRouteRules = /* @__PURE__ */ (() => {
 		return r;
 	};
 })();
-var _lazy_IYbR4t = defineLazyEventHandler(() => import("./_chunks/renderer-template.mjs"));
+var _lazy_amkDjh = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
 var findRoute = /* @__PURE__ */ (() => {
 	const data = {
 		route: "/**",
-		handler: _lazy_IYbR4t
+		handler: _lazy_amkDjh
 	};
 	return ((_m, p) => {
 		return {
@@ -275,7 +338,7 @@ var findRoute = /* @__PURE__ */ (() => {
 })();
 var globalMiddleware = [toEventHandler(static_default)].filter(Boolean);
 //#endregion
-//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.5_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/runtime/internal/error/prod.mjs
+//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.6_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/runtime/internal/error/prod.mjs
 var errorHandler = (error, event) => {
 	const res = defaultHandler(error, event);
 	return new NodeResponse(typeof res.body === "string" ? res.body : JSON.stringify(res.body, null, 2), res);
@@ -366,7 +429,7 @@ function createH3App(config) {
 	return h3App;
 }
 //#endregion
-//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.5_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/runtime/internal/app.mjs
+//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.6_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/runtime/internal/app.mjs
 var APP_ID = "default";
 function useNitroApp() {
 	let instance = useNitroApp._instance;
@@ -414,7 +477,7 @@ function getRouteRules(method, pathname) {
 	};
 }
 //#endregion
-//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.5_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/runtime/internal/error/hooks.mjs
+//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.6_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/runtime/internal/error/hooks.mjs
 function _captureError(error, type) {
 	console.error(`[${type}]`, error);
 	useNitroApp().captureError?.(error, { tags: [type] });
@@ -427,7 +490,7 @@ function trapUnhandledErrors() {
 //#region #nitro/virtual/tracing
 var tracingSrvxPlugins = [];
 //#endregion
-//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.5_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/presets/node/runtime/node-server.mjs
+//#region node_modules/.pnpm/nitro@3.0.260610-beta_@upstash+redis@1.37.0_chokidar@5.0.0_jiti@2.7.0_vite@8.1.6_@types+node@22.20.1_jiti@2.7.0_/node_modules/nitro/dist/presets/node/runtime/node-server.mjs
 var _parsedPort = Number.parseInt(process.env.NITRO_PORT ?? process.env.PORT ?? "");
 var port = Number.isNaN(_parsedPort) ? 3e3 : _parsedPort;
 var host = process.env.NITRO_HOST || process.env.HOST;
