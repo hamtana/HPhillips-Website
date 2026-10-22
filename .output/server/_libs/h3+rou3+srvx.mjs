@@ -958,7 +958,7 @@ var NullProtoObj = /* @__PURE__ */ (() => {
 	return e.prototype = Object.create(null), Object.freeze(e.prototype), e;
 })();
 //#endregion
-//#region node_modules/.pnpm/h3@2.0.1-rc.22_crossws@0.4.10_srvx@0.11.22_/node_modules/h3/dist/h3.mjs
+//#region node_modules/.pnpm/h3@2.0.1-rc.22_crossws@0.4.15_srvx@0.11.22_/node_modules/h3/dist/h3.mjs
 function decodePathname(pathname) {
 	return decodeURI(pathname.includes("%25") ? pathname.replace(/%25/g, "%2525") : pathname);
 }
