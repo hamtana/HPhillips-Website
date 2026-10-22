@@ -12,3 +12,4 @@ allowBuilds:
 overrides:
    "seroval" : '>=1.6.2'
    "shell-quote" : '>=1.11.0'
+   "postcss-selector-parser": '>=7.1.6'
