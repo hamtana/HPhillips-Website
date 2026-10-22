@@ -10,6 +10,5 @@ allowBuilds:
   sharp: false
 
 overrides:
-  "seroval" : '>=1.6.2'
-  "shell-quote" : '>=1.11.0'
-  
+   "seroval" : '>=1.6.2'
+   "shell-quote" : '>=1.11.0'
